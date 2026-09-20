@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Millat Programmer Association (MPA) ক্লাস স্টোর — HTML, C এবং ফ্রি ক্লাস ব্রাউজ করুন।">
+  <title>ক্লাস স্টোর — MPA</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="MPA Logo" class="nav-logo">
+        <span class="nav-brand-name">Millat Programmer Association</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="routine.html">রুটিন</a></li>
+        <li><a href="classes.html" class="active">ক্লাস স্টোর</a></li>
+        <li><a href="resources.html">রিসোর্স</a></li>
+        <li><a href="enroll.html">ভর্তি</a></li>
+        <li><a href="register.html">রেজিস্ট্রেশন</a></li>
+        <li><a href="paid.html">পেইড স্টুডেন্ট</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header fade-in">
+    <div class="container">
+      <h1>ক্লাস লাইব্রেরি</h1>
+      <p>আমাদের সব ক্লাস ব্রাউজ করুন। বিষয় অনুযায়ী ফিল্টার করুন অথবা ফ্রি প্রিভিউ খুঁজে নিন।</p>
+    </div>
+  </header>
+
+  <!-- ========== FILTER BAR ========== -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">সব</button>
+        <button class="filter-btn" data-filter="html">HTML</button>
+        <button class="filter-btn" data-filter="c">C</button>
+        <button class="filter-btn" data-filter="free">ফ্রি</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLASSES GRID ========== -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="classes-grid" id="classes-grid">
+        <!-- js/classes.js দ্বারা রেন্ডার করা হবে -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLASS DETAIL MODAL ========== -->
+  <div class="modal-overlay" id="class-modal-overlay">
+    <div class="modal" id="class-modal">
+      <!-- classes.js দ্বারা ডায়নামিকভাবে পূরণ করা হবে -->
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer-placeholder">
+    <!-- js/main.js দ্বারা ইনজেক্ট করা হবে -->
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="data/classes.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/classes.js"></script>
+</body>
+</html>

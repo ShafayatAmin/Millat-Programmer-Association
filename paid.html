@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="এই সপ্তাহের পেইড স্টুডেন্ট — Millat Programmer Association (MPA)। যারা এই সপ্তাহে ফি পরিশোধ করেছেন তাদের তালিকা।">
+  <title>পেইড স্টুডেন্ট — MPA</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="MPA Logo" class="nav-logo">
+        <span class="nav-brand-name">Millat Programmer Association</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="routine.html">রুটিন</a></li>
+        <li><a href="classes.html">ক্লাস স্টোর</a></li>
+        <li><a href="resources.html">রিসোর্স</a></li>
+        <li><a href="enroll.html">ভর্তি</a></li>
+        <li><a href="register.html">রেজিস্ট্রেশন</a></li>
+        <li><a href="paid.html" class="active">পেইড স্টুডেন্ট</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header fade-in">
+    <div class="container">
+      <h1>এই সপ্তাহের পেইড স্টুডেন্ট</h1>
+      <p>যারা এই সপ্তাহে ফি পরিশোধ করেছেন তাদের তালিকা। প্রতিটি সপ্তাহ শেষে তালিকা আপডেট করা হয়।</p>
+    </div>
+  </header>
+
+  <!-- ========== PAID STUDENTS CONTENT ========== -->
+  <section class="section fade-in">
+    <div class="container">
+      <div id="paid-content">
+        <!-- Rendered by js/paid.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer-placeholder">
+    <!-- Injected by js/main.js -->
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="data/paid-students.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/paid.js"></script>
+</body>
+</html>

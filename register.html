@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MPA-তে রেজিস্ট্রেশন করুন — ফর্ম পূরণ করুন, PDF ডাউনলোড করুন, এবং Registration ID সুরক্ষিত রাখুন।">
+  <title>রেজিস্ট্রেশন — MPA</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="MPA Logo" class="nav-logo">
+        <span class="nav-brand-name">Millat Programmer Association</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="routine.html">রুটিন</a></li>
+        <li><a href="classes.html">ক্লাস স্টোর</a></li>
+        <li><a href="resources.html">রিসোর্স</a></li>
+        <li><a href="enroll.html">ভর্তি</a></li>
+        <li><a href="register.html" class="active">রেজিস্ট্রেশন</a></li>
+        <li><a href="paid.html">পেইড স্টুডেন্ট</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header fade-in">
+    <div class="container">
+      <h1>MPA-তে রেজিস্ট্রেশন করুন</h1>
+      <p>ফর্ম পূরণ করুন, আপনার PDF ডাউনলোড করুন, এবং আপনার Registration ID সুরক্ষিত রাখুন।</p>
+    </div>
+  </header>
+
+  <!-- ========== STEP INDICATOR ========== -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="step-indicator" id="step-indicator">
+        <div class="step-dot active" data-step="1">
+          <span class="step-num">১</span>
+          <span class="step-label">তথ্য প্রদান</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="2">
+          <span class="step-num">২</span>
+          <span class="step-label">পেমেন্ট ও PDF</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STEP 1: REGISTRATION FORM ========== -->
+  <section class="section fade-in" id="step-1-section">
+    <div class="container">
+      <form id="reg-form" class="form-grid">
+
+        <div class="form-group">
+          <label for="reg-name">পুরো নাম <span class="required">*</span></label>
+          <input type="text" id="reg-name" class="form-control" required placeholder="আপনার পুরো নাম লিখুন">
+          <div class="field-error" id="error-name"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-class">ক্লাস <span class="required">*</span></label>
+          <select id="reg-class" class="form-control" required>
+            <option value="">আপনার ক্লাস নির্বাচন করুন</option>
+          </select>
+          <div class="field-error" id="error-class"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-dept">বিভাগ <span class="required">*</span></label>
+          <select id="reg-dept" class="form-control" required>
+            <option value="">বিভাগ নির্বাচন করুন</option>
+          </select>
+          <div class="field-error" id="error-dept"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-section">শাখা <span class="required">*</span></label>
+          <select id="reg-section" class="form-control" required>
+            <option value="">শাখা নির্বাচন করুন</option>
+          </select>
+          <div class="field-error" id="error-section"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-roll">রোল <span class="required">*</span></label>
+          <input type="number" id="reg-roll" class="form-control" required min="1" placeholder="আপনার রোল নম্বর লিখুন">
+          <div class="field-error" id="error-roll"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-gender">লিঙ্গ <span class="required">*</span></label>
+          <select id="reg-gender" class="form-control" required>
+            <option value="">লিঙ্গ নির্বাচন করুন</option>
+          </select>
+          <div class="field-error" id="error-gender"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-dob">জন্ম তারিখ <span class="required">*</span></label>
+          <div class="dob-group">
+            <select id="dob-day" class="form-control">
+              <option value="">দিন</option>
+            </select>
+            <select id="dob-month" class="form-control">
+              <option value="">মাস</option>
+            </select>
+            <select id="dob-year" class="form-control">
+              <option value="">বছর</option>
+            </select>
+          </div>
+          <div class="field-error" id="error-dob"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-address">ঠিকানা <span class="required">*</span></label>
+          <input type="text" id="reg-address" class="form-control" required placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন" minlength="5">
+          <div class="field-error" id="error-address"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-whatsapp">WhatsApp নম্বর <span class="required">*</span></label>
+          <div class="phone-group">
+            <span class="phone-prefix">+880</span>
+            <input type="tel" id="reg-whatsapp" class="form-control" required placeholder="01XXXXXXXXX" maxlength="11">
+          </div>
+          <div class="field-error" id="error-whatsapp"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-phone">ব্যক্তিগত ফোন নম্বর <span class="required">*</span></label>
+          <div class="phone-group">
+            <span class="phone-prefix">+880</span>
+            <input type="tel" id="reg-phone" class="form-control" required placeholder="01XXXXXXXXX" maxlength="11">
+          </div>
+          <div class="field-error" id="error-phone"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">ইমেইল <span class="required">*</span></label>
+          <input type="email" id="reg-email" class="form-control" required placeholder="your@email.com">
+          <div class="field-error" id="error-email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-father-name">পিতার নাম <span class="required">*</span></label>
+          <input type="text" id="reg-father-name" class="form-control" required placeholder="পিতার পুরো নাম লিখুন">
+          <div class="field-error" id="error-father-name"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-father-phone">পিতার মোবাইল <span class="required">*</span></label>
+          <input type="tel" id="reg-father-phone" class="form-control" required placeholder="01XXXXXXXXX" maxlength="15">
+          <div class="field-error" id="error-father-phone"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-mother-name">মাতার নাম <span class="required">*</span></label>
+          <input type="text" id="reg-mother-name" class="form-control" required placeholder="মাতার পুরো নাম লিখুন">
+          <div class="field-error" id="error-mother-name"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-mother-phone">মাতার মোবাইল <span class="required">*</span></label>
+          <input type="tel" id="reg-mother-phone" class="form-control" required placeholder="01XXXXXXXXX" maxlength="15">
+          <div class="field-error" id="error-mother-phone"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-picture">আপনার ছবি</label>
+          <div class="file-input-wrap">
+            <input type="file" id="reg-picture" accept="image/jpeg,image/png">
+          </div>
+          <div class="file-preview" id="picture-preview"></div>
+          <div class="field-error" id="error-picture"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-16">রেজিস্ট্রেশন আইডি তৈরি করুন</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== STEP 1 RESULT: SUCCESS PANEL ========== -->
+  <div id="step-1-result" style="display:none" class="success-panel fade-in">
+    <div class="container">
+      <h2>রেজিস্ট্রেশন সম্পন্ন!</h2>
+      <p>আপনার Registration ID:</p>
+      <div class="reg-id" id="display-reg-id"></div>
+      <div class="save-note">এই আইডিটি সংরক্ষণ করুন — পেমেন্ট কনফার্ম করতে এটি লাগবে।</div>
+
+      <h3>আপনার তথ্য</h3>
+      <table class="summary-table">
+        <tr><td>নাম</td><td id="summary-name"></td></tr>
+        <tr><td>ক্লাস</td><td id="summary-class"></td></tr>
+        <tr><td>বিভাগ</td><td id="summary-dept"></td></tr>
+        <tr><td>শাখা</td><td id="summary-section"></td></tr>
+        <tr><td>রোল</td><td id="summary-roll"></td></tr>
+        <tr><td>লিঙ্গ</td><td id="summary-gender"></td></tr>
+        <tr><td>জন্ম তারিখ</td><td id="summary-dob"></td></tr>
+        <tr><td>ঠিকানা</td><td id="summary-address"></td></tr>
+        <tr><td>WhatsApp</td><td id="summary-whatsapp"></td></tr>
+        <tr><td>ফোন</td><td id="summary-phone"></td></tr>
+        <tr><td>ইমেইল</td><td id="summary-email"></td></tr>
+        <tr><td>পিতা</td><td id="summary-father-name"></td></tr>
+        <tr><td>পিতার মোবাইল</td><td id="summary-father-phone"></td></tr>
+        <tr><td>মাতা</td><td id="summary-mother-name"></td></tr>
+        <tr><td>মাতার মোবাইল</td><td id="summary-mother-phone"></td></tr>
+        <tr><td>Registration ID</td><td id="summary-regid"></td></tr>
+      </table>
+
+      <!-- Payment instructions box -->
+      <div class="payment-box">
+        <h3>পেমেন্ট নির্দেশনা</h3>
+        <p>সাপ্তাহিক ৫০&#2547; ফি bKash বা Nagad (Send Money) এ পাঠান।</p>
+        <div class="payment-number">+8801870746153</div>
+        <p>পেমেন্ট করার পর TrxID সংরক্ষণ করুন।</p>
+      </div>
+
+      <a id="wa-payment-link" class="btn btn-green mt-16" target="_blank" rel="noopener">WhatsApp-এ পেমেন্ট পাঠান</a>
+
+      <div class="mt-16">
+        <button class="btn btn-primary" id="go-to-payment-btn">পেমেন্ট তথ্য প্রদান করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== STEP 2: PAYMENT FORM ========== -->
+  <section class="section fade-in" id="step-2-section" style="display:none">
+    <div class="container">
+      <h2 class="section-title text-center">পেমেন্ট তথ্য</h2>
+      <p class="section-subtitle text-center">পেমেন্ট সম্পন্ন হলে নিচের ফর্ম পূরণ করুন এবং আপনার আবেদন PDF ডাউনলোড করুন।</p>
+
+      <form id="payment-form" class="form-grid" style="max-width: 600px; margin: 0 auto;">
+        <div class="form-group full-width">
+          <label for="pay-bkash">bKash / Nagad নম্বর <span class="required">*</span></label>
+          <div class="phone-group">
+            <span class="phone-prefix">+880</span>
+            <input type="tel" id="pay-bkash" class="form-control" required placeholder="01XXXXXXXXX" maxlength="11">
+          </div>
+          <div class="field-error" id="error-bkash"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="pay-amount">পরিমাণ (৳) <span class="required">*</span></label>
+          <input type="number" id="pay-amount" class="form-control" required value="50" min="1" placeholder="50">
+          <div class="field-error" id="error-amount"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="pay-trxid">TrxID <span class="required">*</span></label>
+          <input type="text" id="pay-trxid" class="form-control" required placeholder="লেনদেন আইডি লিখুন" minlength="5">
+          <div class="field-error" id="error-trxid"></div>
+        </div>
+
+        <div class="form-group full-width">
+          <button type="submit" class="btn btn-primary btn-block" id="download-pdf-btn">PDF ডাউনলোড করুন</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== PDF DOWNLOAD SUCCESS ========== -->
+  <div id="pdf-success" style="display:none" class="success-panel fade-in">
+    <div class="container">
+      <h2>PDF ডাউনলোড সম্পন্ন!</h2>
+      <p class="save-note">আপনার আবেদন PDF ডাউনলোড হয়েছে। প্রিন্ট করে স্বাক্ষর করুন।</p>
+      <div class="mt-16">
+        <a href="index.html" class="btn btn-primary">হোমে ফিরে যান</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer-placeholder">
+    <!-- js/main.js দ্বারা ইনজেক্ট করা হবে -->
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="libs/pdf-lib.min.js"></script>
+  <script src="data/pdf-blank.js"></script>
+  <script src="data/pdf-fields.js"></script>
+  <script src="data/registration-fields.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

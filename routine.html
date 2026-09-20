@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="সাপ্তাহিক ক্লাস রুটিন ও সময়সূচী — Millat Programmer Association (MPA)।">
+  <title>রুটিন — MPA</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="MPA Logo" class="nav-logo">
+        <span class="nav-brand-name">Millat Programmer Association</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="routine.html" class="active">রুটিন</a></li>
+        <li><a href="classes.html">ক্লাস স্টোর</a></li>
+        <li><a href="resources.html">রিসোর্স</a></li>
+        <li><a href="enroll.html">ভর্তি</a></li>
+        <li><a href="register.html">রেজিস্ট্রেশন</a></li>
+        <li><a href="paid.html">পেইড স্টুডেন্ট</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header fade-in">
+    <div class="container">
+      <h1>সাপ্তাহিক রুটিন</h1>
+      <p>আপনার আসন্ন লাইভ Zoom ক্লাসগুলো — MPA দিয়ে আপনার সপ্তাহ পরিকল্পনা করুন।</p>
+    </div>
+  </header>
+
+  <!-- ========== ROUTINE NOTE ========== -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="routine-note">
+        কেন্ত্রিক সদস্যরা WhatsApp-এ প্রতিটি ক্লাসের আগে Zoom লিঙ্ক পান। ক্লাস শুরু হবার আগ দিয়ে Link কাজ করবে।
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ROUTINE TABLE ========== -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="routine-table-wrap">
+        <table class="routine-table">
+          <thead>
+            <tr>
+              <th>দিন</th>
+              <th>সময়</th>
+              <th>বিষয়</th>
+              <th>টপিক</th>
+              <th>যোগ দিন</th>
+            </tr>
+          </thead>
+          <tbody id="routine-body">
+            <!-- Rendered by js/routine.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLASS MODAL ========== -->
+  <div class="modal-overlay" id="class-modal-overlay">
+    <div class="modal" id="class-modal">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer-placeholder">
+    <!-- Injected by js/main.js -->
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="data/routine.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/routine.js"></script>
+</body>
+</html>
